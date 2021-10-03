@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men Clothing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./CSS/men-category.css">
+
+</head>
+<body>
+    <header>
+        <div class="loggin" id="log-in">
+            <div class="content">
+                <div onclick="popUp()" class="close-btn2" > × </div>
+                <form  method="GET" onsubmit="correctLogin();">
+                    
+                    <h1 id="sign">Sign in</h1>
+                    <div>
+                        UserName:<input type="email" name="email" id="email">
+                        Password:<input type="password" name="password" id="password">
+                    </div>
+                    <button type="submit" >Sign in</button>
+                    <p>Don't have any account? <a href="sign-up.html">Sign Up</a></p>
+                </form>
+
+
+            </div>
+        </div>
+        <nav>        
+            <img class="logo1" src="./img/miscendence.png" alt="" >
+            <div class="text">
+                <ul class="menu">
+                    <li id="home" ><a  href="index.html">HOME</a></li>
+                    <li id="shop"><a  href="#"> SHOP</a>
+
+                        <ul class="shop__list">
+                            <div >
+                                <a href="women-category.html">WOMEN'S CLOTHING</a> 
+                                <li>
+                                    <ul  class="shop__container" >
+                                        <li class="shop__items"><a href="">Tops & T-shirts</a></li>
+                                        <li class="shop__items"><a href="">Sweatshirts</a></li>
+                                        <li class="shop__items"><a href="">Jacket</a></li>
+                                        <li class="shop__items"><a href="">Blazer</a></li>
+                                        <li class="shop__items"><a href="">Jean Jackets</a></li>
+                                        <li class="shop__items"><a href="">Shorts & Capris</a></li>
+                                        <li class="shop__items"><a href="">Skirts</a></li>
+                                        <li class="shop__items"><a href="">Jeans</a></li>
+                                        <li class="shop__items"><a href="">Overall</a></li>
+                                        <li class="shop__items"><a href="">Dresses</a></li>
+                                        <li class="shop__items"><a href="">Sale</a></li>
+                                    </ul>       
+                                </li>
+                            </div>
+                            <div>
+                                <a href="men-category.html">MEN'S CLOTHING</a>
+                                <li>
+                                    <ul class="shop__container">
+                                        <li><a class="shop__items" href="">Shirts & T-Shirts</a></li>
+                                        <li><a class="shop__items" href="">Sweetshirts</a></li>
+                                        <li><a class="shop__items" href="">Outerwear</a></li>
+                                        <li><a class="shop__items" href="">Jean Jackets</a></li>
+                                        <li><a class="shop__items" href="">Pants</a></li>
+                                        <li><a class="shop__items" href="">Jeans</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                            <div>
+                                <a href="">ACCESSORIES</a>
+                                <li>
+                                    <ul class="shop__container">
+                                        <li><a class="shop__items" href="">Hats</a></li>
+                                        <li><a class="shop__items" href="">Socks</a></li>
+                                        <li><a class="shop__items" href="">Caravats</a></li>
+                                        <li><a class="shop__items" href="">Glasses</a></li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+
+
+                        
+                    <li id="collect"><a  href="#">COLLECTION</a>
+                        <ul class="collect__list">
+                            <ul  class="collect__container" >
+                                <li class="collect__items"><a href="">Summer Collection</a></li>
+                                <li class="collect__items"><a href="">Miscendence X Blackpink</a></li>
+                                <li class="collect__items"><a href="">Street style aesthetic</a></li>
+                            </ul>    
+                        </ul>    
+                    </li>
+                    <li id="blog" ><a  href="">BLOG</a></li>
+                </ul>
+            </div>
+
+
+            <div class="icon">
+                <ul >
+                    <li><i class="fa fa-search"></i></li>
+                    <li onclick="popUp()"><i class="fa fa-user"></i></li>
+                    <li ><a href="shop-cart.html"><i  class="fa fa-shopping-cart"></i></a> </li>
+                    
+                    
+                    <div id="myNav" class="text2">
+                                <li onclick="openNav()"><i class="fa fa-bars"></i>
+                                <ul class="menu2">
+                                    <br>
+                                    <li><a onclick="closeNav()" href="" class="close-btn" id="closeBtn" > <i class="fa fa-chevron-right"></i></a></li>
+                                    <br> 
+                                    <li><a  href="./index.html"> HOME</a></li>
+                                    <li id="shop"><a  href="#"> SHOP</a>
+                
+                                        <ul class="shop__list2">
+                                            <div >
+                                                <a href="./women-category.html">WOMEN'S CLOTHING</a> 
+                                                <li>
+                                                    <ul  class="shop__container" >
+                                                        <li class="shop__items"><a href="">Tops & T-shirts</a></li>
+                                                        <li class="shop__items"><a href="">Sweatshirts</a></li>
+                                                        <li class="shop__items"><a href="">Jacket</a></li>
+                                                        <li class="shop__items"><a href="">Blazer</a></li>
+                                                        <li class="shop__items"><a href="">Jean Jackets</a></li>
+                                                        <li class="shop__items"><a href="">Shorts & Capris</a></li>
+                                                        <li class="shop__items"><a href="">Skirts</a></li>
+                                                        <li class="shop__items"><a href="">Jeans</a></li>
+                                                        <li class="shop__items"><a href="">Overall</a></li>
+                                                        <li class="shop__items"><a href="">Dresses</a></li>
+                                                        <li class="shop__items"><a href="">Sale</a></li>
+                                                    </ul>       
+                                                </li>
+                                            </div>
+                                            <div>
+                                                <a href="./men-category.html">MEN'S CLOTHING</a>
+                                                <li>
+                                                    <ul class="shop__container">
+                                                        <li><a class="shop__items" href="">Shirts & T-Shirts</a></li>
+                                                        <li><a class="shop__items" href="">Sweetshirts</a></li>
+                                                        <li><a class="shop__items" href="">Outerwear</a></li>
+                                                        <li><a class="shop__items" href="">Jean Jackets</a></li>
+                                                        <li><a class="shop__items" href="">Pants</a></li>
+                                                        <li><a class="shop__items" href="">Jeans</a></li>
+                                                    </ul>
+                                                </li>
+                                            </div>
+                                            <div>
+                                                <a href="">ACCESSORIES</a>
+                                                <li>
+                                                    <ul class="shop__container">
+                                                        <li><a class="shop__items" href="">Hats</a></li>
+                                                        <li><a class="shop__items" href="">Socks</a></li>
+                                                        <li><a class="shop__items" href="">Caravats</a></li>
+                                                        <li><a class="shop__items" href="">Glasses</a></li>
+                                                    </ul>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                    <li id="collect"><a  href="#">COLLECTION</a>
+                                        <ul class="collect__list2">
+                                            <ul  class="collect__container" >
+                                                <li class="collect__items"><a href="">Summer Collection</a></li>
+                                                <li class="collect__items"><a href="">Miscendence X Blackpink</a></li>
+                                                <li class="collect__items"><a href="">Street style aesthetic</a></li>
+                                            </ul>    
+                                        </ul>    
+                                    </li>
+                                    <li><a  href="#">BLOG</a></li>
+                                </ul>
+                            </div>
+
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="slideshow">
+
+            <div class="mySlider">
+                <div class="slide" ><img  src="./img/banner.jpg" alt="" width="1200px" height="500px"></div>
+                <div class="slide " ><img  src="./img/banner3.jpg" alt="" width="1200px" height="500px"></div>
+                <div class="slide "><img  src="./img/banner6.jpg" alt="" width="1200px" height="500px"></div>   
+                <div class="slide "><img src="./img/banner5.jpg" alt="" width="1200px" height="500px"> </div>
+            </div> 
+        </div>
+        <div class="main-box">
+            <h2>MEN'S CLOTHING</h2>
+            <div class="maintain">
+                <aside>
+                    <h5>Shop Clothing</h5>
+                    <hr>
+                    <ul  class="menclo" >
+                        <li class=""><a href="">Shirts & T-Shirts</a></li>
+                        <li class=""><a href="">Sweatshirts</a></li>
+                        <li class=""><a href="">Outerwear</a></li>
+                        <li class=""><a href="">Jean Jackets</a></li>
+                        <li class=""><a href="">Pants</a></li>
+                        <li class=""><a href="">Skirts</a></li>
+                        <li class=""><a href="">Jeans</a></li>
+                    </ul>
+                    <hr>
+                    <h3>Price</h3>
+                    <ul class="check">
+                        <li><input type="checkbox">$50-$70</li>
+                        <li><input type="checkbox">$75-$100</li>
+                        <li><input type="checkbox">$100-$200</li>
+                        <li><input type="checkbox">$200+</li>
+                    </ul>
+                    <hr>
+                    <h3>Fit Size</h3>
+                    <ul class="check">
+                        <li><input type="checkbox">311 (42)</li>
+                        <li><input type="checkbox">501 (4)</li>
+                        <li><input type="checkbox">451 (33)</li>
+                        <li><input type="checkbox">701 (12)</li>
+                        <li><input type="checkbox">721 (5)</li>
+                    </ul>
+                </aside>
+                
+                
+                <div class="cloth" >
+                    <div class="cloth__sort">
+                        <div>
+                            <p>Sort by </p>
+                            <select name="" id="">
+                                <option>Trending</option>
+                                <option>Price</option>
+                                <option>Free ship</option>
+                                <option>Sale up to 50%</option>
+                            </select>
+                        </div>
+                        <div>
+                            <p>Show</p>
+                            <select name="" id="">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                        <p>Show 1-4 of 25 Results</p>
+                    </div>
+                    <div class="cloth__list">
+                        <div class="cloth__list-top">
+                            <div class="cloth__list-box">
+<!-- 1 -->                                
+
+                                <img src="./img/clothm-01.jpg" alt=""
+                                onmouseover="this.src='https://lsco.scene7.com/is/image/lsco/944930006-back-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" onmouseout="this.src='https://lsco.scene7.com/is/image/lsco/944930006-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" 
+                                >
+                                <button>ADD TO CART</button>
+
+                                <p>TRUCKER JACKET</p>
+                                <p class="tag-price">$50.99</p>
+                            </div>
+                            <div class="cloth__list-box">
+<!-- 2 -->                                
+                                <img src="./img/clothm-02.jpg" alt=""
+                                onmouseover="this.src='https://lsco.scene7.com/is/image/lsco/273240002-back-pdp-lse?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" onmouseout="this.src='https://lsco.scene7.com/is/image/lsco/273240002-alt-f-pdp-lse?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" 
+                                >
+                                <button>ADD TO CART</button>
+                                <p>SLEEVE T-SHIRT</p>
+                                <p class="tag-price">$99.00</p>
+                            </div>
+                            <div class="cloth__list-box">
+<!-- 3 -->                                
+
+                                <img src="./img/clothm-03.jpg" alt=""
+                                onmouseover="this.src='https://lsco.scene7.com/is/image/lsco/levis/clothing/857440001-back-pdp.jpg?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" onmouseout="this.src='https://lsco.scene7.com/is/image/lsco/levis/clothing/857440001-dynamic1-pdp.jpg?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" 
+                                >
+                                <button>ADD TO CART</button>                                <p>CLOUD SHIRT</p>
+                                <p class="tag-price">$34.00</p>
+                            </div>
+                        </div>
+                        <div class="cloth__list-bottom">
+                            <div class="cloth__list-box">
+<!-- 4 -->
+                                <img src="./img/clothm-04.jpg" alt=""
+                                onmouseover="this.src='https://lsco.scene7.com/is/image/lsco/levis/clothing/857440002-back-pdp.jpg?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" onmouseout="this.src='https://lsco.scene7.com/is/image/lsco/levis/clothing/857440002-front-pdp.jpg?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" 
+                                >
+                                <button>ADD TO CART</button>                                <p>WAIST MEN'S PANTS</p>
+                                <p class="tag-price">$200.00</p>
+                            </div>
+                            <div class="cloth__list-box">
+<!-- 5 -->
+                                <img src="./img/clothm-05.jpg" alt=""
+                                onmouseover="this.src='https://lsco.scene7.com/is/image/lsco/levis/clothing/163650044-alt6-pdp.jpg?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" onmouseout="this.src='https://lsco.scene7.com/is/image/lsco/levis/clothing/163650044-front-pdp.jpg?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" 
+                                >
+                                <button>ADD TO CART</button>                                <p>SLEEVE LOGO T-SHIRT</p>
+                                <p class="tag-price">$120.00</p>
+                            </div>
+                            <div class="cloth__list-box">
+<!-- 6 -->
+                                <img src="./img/clothm-06.jpg" alt=""
+                                onmouseover="this.src='https://lsco.scene7.com/is/image/lsco/163650122-back-pdp-lse?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" onmouseout="this.src='https://lsco.scene7.com/is/image/lsco/163650122-front-pdp-lse?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" 
+                                >
+                                <button>ADD TO CART</button>                                <p>GRAPHIC HOODIE</p>
+                                <p class="tag-price">$250.99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-page">
+            <ul>
+                <li ><a href=""> <i class="fa fa-chevron-left"></i> Prev Page </a> </li>
+                <li ><a href="">1</a></li>
+                <li ><a href="">2</a></li>
+                <li ><a href="">3</a></li>
+                <li ><a href="">  Next Page <i class="fa fa-chevron-right"></i></a> </li>
+            </ul>
+        </div>
+        <h2>NEW COLLECTION COMING SOON</h2>
+        <img id="banner" src="./img/banner2.jpg" alt="">
+    </main>
+    
+    <footer>
+        <div class="footer-top">
+            <div class="form">
+                <img class="logo2" src="./img/miscendence-footer.png" alt="" >
+                <div class="mail">
+                    <h3 ><i>Some words to our team</i></h3>
+                    <form action="">
+                        <input type="email" placeholder="Your Mail" >
+                        <textarea placeholder="Your Message" cols="30" rows="5"></textarea>
+                    </form>
+                    <input class="btn" type="button" value="Send">
+                </div>
+            </div>
+        
+            <div class="contact">
+                <div class="contact__logo"><i class="fa fa-map-pin"></i></div>
+                <div>
+                    <p class="contact__title">Store Location</p>
+                    <p><i class="fa fa-home"> 313 Trần Hưng Đạo P3 Q1</i></p>
+                    <p><i class="fa fa-phone"></i> 0902625027</p>
+                </div>
+            </div>
+        
+            <div class="contact">
+                <div class="contact__logo"><i class="fa fa-heart"></i></div>
+                <p class="contact__title">Follow Us</p>
+                <p><i class="fa fa-facebook"> Miscendence Shop</i></p>
+                <p><i class="fa fa-instagram"> miscendence.shop</i></p>
+                <p><i class="fa fa-envelope"> Miscendence@gmail.com</i></p>
+            </div>
+        </div>
+        <h4>
+            @2020 All rights Reversed <br>
+            Re-design by VUS School
+        </h4>
+    </footer>
+    <script src="./js/shopping-cart.js"></script>
+
+</body>
+</html>

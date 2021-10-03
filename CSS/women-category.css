@@ -1,0 +1,1295 @@
+@media only screen and (min-width: 1025px)  {
+    #slideshow{
+        overflow: hidden;
+        height: 510px;
+        width: 1200px;
+        margin: 0 auto;
+      }
+    .mySlider{
+        width: 8912px;
+        -webkit-animation: slide 14s ease infinite;
+    }
+     .slide{
+        float: left;
+        height: 510px;
+        width: 1210px;
+        /* width: 400px; luc dau  */
+    }
+     @-webkit-keyframes slide {
+        20% {margin-left: 0px;}
+        30% {margin-left: -1728px;}
+        50% {margin-left: -1728px;}
+        60% {margin-left: -3630px;}
+        80% {margin-left: -3630px;}
+    }
+    form button{ 
+        padding: 0.4em 2em;
+        background-color: rgb(216, 137, 88);
+        color: white;
+        border-radius: 1em;
+    }
+    .loggin.active {
+        position: absolute;
+        transition: all 300ms ease-in-out;
+        transform: translate(0%,-50%) scale(1);
+    }
+    .content ,.content a{
+        color: white;
+    }
+    .content input  {
+        margin: 0.2em;
+        width: 100%;
+    }
+    .content button{
+        margin-top: 1em;
+    }
+    .loggin {
+        transform: translate(0%,0%) scale(0);
+        background-color: rgb(70,70,70);
+        z-index: 2;
+        top:30%;
+        left:35%;
+        position: fixed;
+        text-align: center;
+        width:30%;
+        border-radius: 50px;
+    }
+    .loggin div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .close-btn2 {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        color: white;
+        font-size: 30px;
+        border-radius: 50%;
+        padding: 2px 5px 7px 5px;
+        background: #292929;
+        box-shadow:  5px 5px 15px #3a3a3a, 
+    }
+    #myNav{display: none;}
+    body{
+        width: 85%;
+        margin: auto;
+        background-image: url('https://images.unsplash.com/photo-1596868801151-5d26796963b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
+        background-size: cover;
+    }
+    
+    
+    /* ~~~ NAV ~~~*/
+    #shop,#collect,#blog,#home {text-align: center;}
+
+    nav{
+        width: 85%;
+        top:0;
+        position: fixed;
+        display: flex;
+        background-color: rgba(205,171,134,255);
+        height: 100px;
+        flex-wrap: nowrap;
+    }
+    /* Nav---left */
+    .logo1{
+        object-fit: cover;
+        flex-grow: 1;
+        flex-shrink: 0;
+        height:100px;
+        width: 280px;
+        padding: 5px 0px;
+    }
+    
+    /* Nav---center ( text  >  menu  >  home/..blog    >  list > container > items ) */
+    .text{
+        flex-grow: 2;
+        display: block;
+    }
+    text a{
+        text-align: center;
+    }
+    
+    .menu{
+        padding-top: 15px;
+        display:flex;
+        padding-inline-start: 0;
+    }
+    .menu li {
+        flex-grow: 1;
+        list-style-type: none;
+        flex-basis: 100%;
+        
+    }
+    .menu a{
+        text-decoration: none;  
+        color: rgba(71,70,70,255);
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bold;
+    }
+    
+    /* shop */
+    #shop:hover{
+        background-color: rgb(211, 198, 184);
+        border-radius: 0.2em;
+        padding: 0.1em;
+    }   
+    #shop:hover .shop__list{
+        display: block;
+    }
+    .shop__list{
+        position: absolute;
+        padding-inline-start: 0;
+        display: none;
+        background-color: rgb(211, 198, 184);
+        border-radius: 1em;
+        margin-left: -200px;/* note */
+        padding: 1em;
+    }
+    .shop__list div{
+        margin-top: 1em;
+        display: inline-block;
+        /* border: yellow 3px solid; */
+        margin: 0px 10px;
+    }
+    .shop__container{
+        display: flex;
+        flex-direction:column ;
+        list-style-type: none;
+    }
+    .shop__items{
+        font-size: 1em;
+    }
+    
+    /* collect */
+    #collect:hover{
+        background-color: rgb(211, 198, 184);
+        border-radius: 0.2em;
+        padding: 0.1em;
+    }
+    #collect:hover .collect__list{
+        display: block;
+    }
+    .collect__list{
+        position: absolute;
+        padding-inline-start: 0;
+        display: none;
+        background-color: rgb(211, 198, 184);
+        border-radius: 1em;
+        margin-left: -50px;/* note */
+        padding: 1em;
+    }
+    .collect__items{
+        font-size: 1em;
+    }
+    
+    /* Nav---right */
+    .icon{
+        display: flex;
+    
+    }
+    .icon ul{
+        padding-inline-start: 0px;
+        display: flex;
+    
+    }
+    .icon li {
+        margin: 0.5em;
+        list-style-type: none;
+    }
+    .icon i{
+        color: rgba(71,70,70,255);
+        font-size: 1.8em;
+        padding: 0px 15px 0px 10px;
+    }
+    
+    
+    
+    /* ~~~ MAIN ~~~~ */
+    /*
+    main > main-box > maintain > aside ; cloth
+    
+    1. maintain > aside > womenclo 
+    2. maintain > cloth > cloth__sort ; cloth__list  >  cloth__list-top/bottom
+    > cloth__list-box   > tag-price
+    
+    */
+    main{
+        margin-top: 80px;
+
+        display: flex;
+        background-color: rgb(223, 223, 223);
+        flex-direction: column;
+    }
+    h2{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+    .main-box{
+        width: 90%;
+        margin: auto;
+    }
+    .maintain{
+        display: flex;
+    }
+    .maintain hr{
+        width: 90%;
+        border-color: rgb(255, 255, 255);
+        border-style:groove
+    }
+    
+    /* aside */
+    aside{
+        height: 380px;
+        padding-top: 1.5em;
+    }
+    aside h5{
+        margin-top: 1em;
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 1em;
+        color:rgb(71,70,97) ;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    aside ul{
+        margin: 0;
+        width: 200px;
+        padding: 0px 15px 50px 15px;
+    }
+    .womenclo li{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        list-style-type: none;
+    }
+    .womenclo a{
+        text-decoration: none;
+        color: rgb(80, 80, 80)
+    }
+    
+    
+    /* cloth */
+    .cloth{
+        flex-grow: 1;
+        margin-left: 1em;
+    }
+    .cloth__sort{
+        display: flex;
+        justify-content: space-evenly;
+        height: 20px;
+        margin-bottom: 20px;
+    }
+    .cloth__sort div {
+        display: flex;
+    }
+    .cloth__sort p{
+        margin: 0;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .cloth__sort select{
+        margin-left: 20px;
+        width: 100px;
+    }
+    
+    
+    .cloth__list{
+        display: flex;
+        flex-direction: column;
+    }
+    .cloth__list img{
+        box-shadow: 0px 0px 5px 5px #d4d4d4;
+        width: 80%;
+    }
+    .cloth__list-top{
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+    .cloth__list-bottom{
+        margin: 30px 0px 100px 0px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .cloth__list-box p{
+        margin:0;
+        text-align: center;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+    .cloth__list-box button {
+        width: 80%;
+        background-color: white;
+        color: rgb(101,92,87);
+        padding: 0.5em 0em;
+        border: white 2px solid;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+
+
+    .tag-price{
+        font-weight: bold;
+    }
+    #banner{
+        margin: auto;
+        object-fit: cover;
+        width: 100%;
+        height: 400px;
+    }
+    .btn-page ul{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3em;
+    }
+    .btn-page li{
+        font-size: 1.5em;
+        list-style: none;
+        margin: 0em 1em;
+    }
+    .btn-page a {
+        color:rgb(71,70,97);
+        text-decoration: none;
+    }
+    .check li ,h3 {
+        color:rgb(71,70,97);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        list-style: none;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* ~~~ FOOTER ~~~ */
+    /* 
+    footer-top  >  1.form  2.contact(2)  
+    1.form    >  logo2 > mail  > form    > input : email + textarea > button
+    2.contact >  contact-logo  > contact-title
+    */
+    footer{
+        background-color: rgba(35,35,35,255);
+        width: 100%;
+    }
+    .footer-top{
+        display: flex;
+    }
+    footer p{
+        color: whitesmoke;
+    }
+    .logo2{
+        object-fit: cover;
+        flex-grow: 1;
+        flex-shrink: 0;
+        height:100px;
+        width: 280px;
+    }
+    .contact, .form{
+        flex-grow: 1;
+    }
+    
+    /* form */
+    .form{
+        text-align: center;
+    }
+    form input , form textarea{
+        width: 70%;
+        margin: 5px;
+        background-color:rgb(223,223,223);
+        color: rgb(66, 66, 66);
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .mail{
+        max-width: 450px;
+        display: block;
+        margin: auto;
+    }
+    .mail h3 {
+        margin-top: 0;
+        color: whitesmoke;
+    }
+    .mail .btn{
+        background-color: rgb(65, 65, 65);
+        color: whitesmoke;
+        width: 80px;
+    }
+    
+    /* contact */
+    .contact{
+        margin: auto 90px;
+        height: 200px;
+    }
+    .contact__logo{
+        color: whitesmoke;
+        font-size: 2em;
+        text-align: center;
+        
+    }
+    .contact__title{
+        text-align: center;
+        font-size: 25px;
+    }
+
+    h4{
+        color:whitesmoke;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .cloth__list-box button{
+        width:80%;
+        background-color: white;
+        color: rgb(101,92,87);
+        padding: 0.5em 0em;
+        border: white 2px solid;
+    }
+    .btn-page{
+        display: none;
+    }
+    #slideshow{display: none;}
+    .loggin.active {
+        position: absolute;
+        transition: all 300ms ease-in-out;
+        transform: translate(0%,-50%) scale(1);
+    }
+    .content ,.content a{
+        color: white;
+    }
+    .content h1{
+        margin-bottom: 1em;
+    }
+    .content input  {
+        padding:0.3em;
+        margin: 0.2em;
+        width: 100%;
+    }
+    .content button{
+        margin-top: 3em;
+    }
+    .loggin {
+        transform: translate(0%,0%) scale(0);
+        background-color: rgb(70,70,70);
+        z-index: 2;
+        top:30%;
+        left:25%;
+        position: fixed;
+        text-align: center;
+        width:50%;
+        height: 18em;
+        border-radius: 50px;
+    }
+    .loggin div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .close-btn2 {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        color: white;
+        font-size: 30px;
+        border-radius: 50%;
+        padding: 2px 5px 7px 5px;
+        background: #292929;
+        box-shadow:  5px 5px 15px #3a3a3a, 
+    }
+    body{
+        margin: 0;
+        width: 100%;
+    }
+    
+    
+    /* ~~~ NAV ~~~*/
+    nav{
+        display: flex;
+        background-color: rgba(205,171,134,255);
+        height: 80px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    /* Nav---left */
+    .logo1{
+        object-fit: cover;
+        flex-grow: 0.7;
+        width: 10%;
+        height: 70px;
+
+    }
+    
+    /* Nav---center ( text  >  menu  >  home/..blog    >  list > container > items ) */
+    .text{
+        display: none;
+    }
+    text a{
+        text-align: center;
+    }
+    
+    .menu{
+        padding-top: 15px;
+        display:flex;
+        padding-inline-start: 0;
+    }
+    .menu li {
+        flex-grow: 1;
+        list-style-type: none;
+        flex-basis: 100%;
+        
+    }
+    .menu a{
+        text-decoration: none;  
+        color: rgba(71,70,70,255);
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bold;
+    }
+    
+    /* shop */
+    .shop__list{
+        position: absolute;
+        padding-inline-start: 0;
+        display: none;
+        background-color: rgb(211, 198, 184);
+        border-radius: 1em;
+        margin-left: -200px;/* note */
+        padding: 1em;
+    }
+    .shop__list div{
+        margin-top: 1em;
+        display: inline-block;
+        margin: 0px 10px;
+    }
+    .shop__container{
+        display: flex;
+        flex-direction:column ;
+        list-style-type: none;
+    }
+    .shop__items{
+        font-size: 1em;
+    }
+    
+    /* collect */
+    #collect:hover{
+        background-color: rgb(211, 198, 184);
+        border-radius: 0.2em;
+        padding: 0.1em;
+    }
+    #collect:hover .collect__list{
+        display: block;
+    }
+    .collect__list{
+        position: absolute;
+        padding-inline-start: 0;
+        display: none;
+        background-color: rgb(211, 198, 184);
+        border-radius: 1em;
+        margin-left: -50px;/* note */
+        padding: 1em;
+    }
+    .collect__items{
+        font-size: 1em;
+    }
+    
+    /* Nav---right */
+    .menu2{
+        background-color: rgb(65, 64, 64);
+        margin-top: 1.2em;
+        margin-left: 4em;
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+    }
+    .close-btn{position: absolute;
+    }
+    #closeBtn{ padding-right: 0;}
+    #closeBtn i{ 
+        color: white;
+        font-size: 1em;
+    }
+
+    .menu2 {
+        width: 1000px;
+    }
+    .menu2 a {
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: rgb(221, 221, 221);
+        text-decoration: none;
+        padding-left: 3em;
+    }
+
+    .shop__list2{
+        display: flex;
+        flex-direction: column;
+    }
+    .shop__list2 div{
+        margin-top: 10px;
+    }
+    .collect__list2 ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .collect__list2 div{
+        margin-top: 10px;
+    }
+
+
+    .icon{
+        display: flex;
+    }
+    .icon ul{
+        padding-inline-start: 0px;
+        display: flex;
+        
+    }
+    .icon li {
+        list-style-type: none;
+    }
+    .icon i{
+        color: rgba(71,70,70,255);
+        font-size: 2em;
+        padding: 0px 15px 0px 10px;
+    }
+    
+    
+    
+    /* ~~~ MAIN ~~~~ */
+    /*
+    main > main-box > maintain > aside ; cloth
+    
+    1. maintain > aside > womenclo 
+    2. maintain > cloth > cloth__sort ; cloth__list  >  cloth__list-top/bottom
+    > cloth__list-box   > tag-price
+    
+    */
+    main{
+        display: flex;
+        background-color: rgb(223, 223, 223);
+        flex-direction: column;
+    }
+    h2{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+    .main-box{
+        width: 100%;
+    }
+    .maintain{
+        display: flex;
+    }
+    .maintain hr{
+        width: 90%;
+        border-color: rgb(255, 255, 255);
+        border-style:groove
+    }
+    
+    /* aside */
+    aside{
+        display: none;
+    }
+    aside{
+        width: 30%;
+        height: 380px;
+        padding-top: 1.5em;
+    }
+    aside h5{
+        margin-top: 1em;
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 1em;
+        color:rgb(71,70,97) ;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    aside ul{
+        margin: 0;
+        width: 200px;
+        padding: 0px 15px 50px 15px;
+    }
+    .womenclo li{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        list-style-type: none;
+    }
+    .womenclo a{
+        text-decoration: none;
+        color: rgb(80, 80, 80)
+    }
+    
+    
+    /* cloth */
+    .cloth{
+        flex-grow: 1;
+    }
+    .cloth__sort{
+        display: flex;
+        justify-content: space-evenly;
+        height: 20px;
+        margin-bottom: 20px;
+    }
+    .cloth__sort div {
+        display: flex;
+    }
+    .cloth__sort p{
+        margin: 0;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .cloth__sort select{
+        margin-left: 20px;
+        width: 100px;
+    }
+    
+    
+    .cloth__list{
+        display: flex;
+        flex-direction: column;
+    }
+    .cloth__list img{
+        width: 80%;
+    }
+    .cloth__list-top{
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+    .cloth__list-bottom{
+        margin: 30px 0px 100px 0px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .cloth__list-box p{
+        margin:0;
+        text-align: center;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+    .tag-price{
+        font-weight: bold;
+    }
+    #banner{
+        margin: auto;
+        object-fit: cover;
+        width: 100%;
+        height: 400px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     /* ~~~ FOOTER ~~~ */
+    /* 
+    footer-top  >  1.form  2.contact(2)  
+    1.form    >  logo2 > mail  > form    > input : email + textarea > button
+    2.contact >  contact-logo  > contact-title
+    */
+    footer{
+        background-color: rgba(35,35,35,255);
+        width: 100%;
+    }
+    .footer-top{
+        display: flex;
+    }
+    footer p{
+        color: whitesmoke;
+    }
+    .logo2{
+        object-fit: cover;
+        flex-grow: 1;
+        flex-shrink: 0;
+        height:100px;
+        width: 280px;
+    }
+    .contact, .form{
+        flex-grow: 1;
+    }
+    
+    /* form */
+    .form{
+        display: none;
+    }
+    .mail{
+        max-width: 450px;
+        display: block;
+        margin: auto;
+    }
+    .mail h3 {
+        margin-top: 0;
+        color: whitesmoke;
+    }
+    .mail .btn{
+        background-color: rgb(65, 65, 65);
+        color: whitesmoke;
+        width: 80px;
+    }
+    
+    /* contact */
+    .contact{
+        margin: auto 50px;
+        padding-top: 1em;
+    }
+    .contact__logo{
+        color: whitesmoke;
+        font-size: 2em;
+        text-align: center;
+        
+    }
+    .contact__title{
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    
+    h4{
+        color:whitesmoke;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
+
+
+@media only screen and (min-width: 360px) and (max-width: 767px){
+    .cloth__list-box button{
+        width: 80%;
+        background-color: white;
+        color: rgb(101,92,87);
+        padding: 0.5em 0em;
+        border: white 2px solid;
+    }
+    .btn-page{
+        display: none;
+    }
+    #slideshow{display: none;}
+    .loggin.active {
+        position: absolute;
+        transition: all 300ms ease-in-out;
+        transform: translate(0%,-50%) scale(1);
+    }
+    .content ,.content a{
+        color: white;
+    }
+    .content h1{
+        margin-bottom: 0.5em;
+    }
+    .content input  {
+        padding:0.3em;
+        margin: 0.2em;
+        width: 100%;
+    }
+    .content button{
+        margin-top: 3em;
+    }
+    .loggin {
+        transform: translate(0%,0%) scale(0);
+        background-color: rgb(70,70,70);
+        z-index: 2;
+        top:50%;
+        left:0%;
+        position: fixed;
+        text-align: center;
+        width:100%;
+        height: 18em;
+        border-radius: 50px;
+    }
+    .loggin div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .close-btn2 {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        height: 30px;
+        color: white;
+        font-size: 30px;
+        border-radius: 50%;
+        padding: 2px 5px 7px 5px;
+        background: #292929;
+        box-shadow:  5px 5px 15px #3a3a3a, 
+    }
+    body{
+        margin: 0;
+        width: 100%;
+    }
+    
+    
+    /* ~~~ NAV ~~~*/
+    nav{
+        display: flex;
+        background-color: rgba(205,171,134,255);
+        /* height: 80px; */
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    /* Nav---left */
+    .logo1{
+        object-fit: cover;
+        width: 50%;
+        height: 80px;
+
+    }
+    
+    /* Nav---center ( text  >  menu  >  home/..blog    >  list > container > items ) */
+    .text{
+        display: none;
+    }
+    text a{
+        text-align: center;
+    }
+    
+    .menu{
+        padding-top: 15px;
+        display:flex;
+        padding-inline-start: 0;
+    }
+    .menu li {
+        flex-grow: 1;
+        list-style-type: none;
+        flex-basis: 100%;
+        
+    }
+    .menu a{
+        text-decoration: none;  
+        color: rgba(71,70,70,255);
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bold;
+    }
+    
+    /* shop */
+
+    .shop__list{
+        position: absolute;
+        padding-inline-start: 0;
+        display: none;
+        background-color: rgb(211, 198, 184);
+        border-radius: 1em;
+        margin-left: -200px;/* note */
+        padding: 1em;
+    }
+    .shop__list div{
+        margin-top: 1em;
+        display: inline-block;
+        margin: 0px 10px;
+    }
+    .shop__container{
+        display: flex;
+        flex-direction:column ;
+        list-style-type: none;
+    }
+    .shop__items{
+        font-size: 1em;
+    }
+    
+    /* collect */
+    #collect:hover{
+        background-color: rgb(211, 198, 184);
+        border-radius: 0.2em;
+        padding: 0.1em;
+    }
+    #collect:hover .collect__list{
+        display: block;
+    }
+    .collect__list{
+        position: absolute;
+        padding-inline-start: 0;
+        display: none;
+        background-color: rgb(211, 198, 184);
+        border-radius: 1em;
+        margin-left: -50px;/* note */
+        padding: 1em;
+    }
+    .collect__items{
+        font-size: 1em;
+    }
+    
+    /* Nav---right */
+    .menu2{
+        border-radius: 10px;
+        background-color: rgb(65, 64, 64);
+        margin-top: -2.9em;
+        margin-left: 12em;
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        width: 100%;
+    }
+    .menu2 a {
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 0.5em;
+        color: rgb(221, 221, 221);
+        text-decoration: none;
+        padding-left: 4em;
+    }
+    
+    .close-btn{position: absolute;
+    }
+    #closeBtn{ padding-right: 0;}
+    #closeBtn i{ 
+        color: white;
+        /* font-size: 1em; */
+    }
+    .shop__list2{
+        display: flex;
+        flex-direction: column;
+    }
+    .shop__list2 div{
+        margin-top: 10px;
+    }
+    .collect__list2 ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .collect__list2 div{
+        margin-top: 10px;
+    }
+
+
+    .icon{
+        display: flex;
+    
+    }
+    .icon ul{
+        padding-inline-start: 0px;
+        display: flex;
+    
+    }
+    .icon li {
+        list-style-type: none;
+    }
+    .icon i{
+        color: rgba(71,70,70,255);
+        font-size: 0.5em;
+        padding: 0px 15px 0px 10px;
+    }
+    
+    
+    
+    /* ~~~ MAIN ~~~~ */
+    /*
+    main > main-box > maintain > aside ; cloth
+    
+    1. maintain > aside > womenclo 
+    2. maintain > cloth > cloth__sort ; cloth__list  >  cloth__list-top/bottom
+    > cloth__list-box   > tag-price
+    
+    */
+    main{
+        display: flex;
+        background-color: rgb(223, 223, 223);
+        flex-direction: column;
+    }
+    h2{
+        font-size: 1em;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+    .main-box{
+        width: 90%;
+        margin: auto;
+    }
+    .maintain{
+        display: flex;
+    }
+    .maintain hr{
+        width: 90%;
+        border-color: rgb(255, 255, 255);
+        border-style:groove
+    }
+    
+    /* aside */
+    aside{display: none;}
+    aside{
+        height: 380px;
+        padding-top: 1.5em;
+    }
+    aside h5{
+        margin-top: 1em;
+        margin-bottom: 0;
+        text-align: center;
+        font-size: 1em;
+        color:rgb(71,70,97) ;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    aside ul{
+        margin: 0;
+        width: 200px;
+        padding: 0px 15px 50px 15px;
+    }
+    .womenclo li{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        list-style-type: none;
+    }
+    .womenclo a{
+        text-decoration: none;
+        color: rgb(80, 80, 80)
+    }
+    
+    
+    /* cloth */
+    .cloth{
+        flex-grow: 1;
+    }
+    .cloth__sort{
+        display: flex;
+        justify-content: space-evenly;
+        height: 20px;
+        margin-bottom: 20px;
+    }
+    .cloth__sort div {
+        display: flex;
+    }
+    .cloth__sort p{
+        font-size: 10px;
+        margin: 0;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .cloth__sort select{
+        margin-left: 5px;
+        width: 50px;
+    }
+    
+    
+    .cloth__list{
+        display: flex;
+        flex-direction: column;
+    }
+    .cloth__list img{
+        width: 80%;
+    }
+    .cloth__list-top{
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+    .cloth__list-bottom{
+        margin: 30px 0px 100px 0px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .cloth__list-box p{
+        font-size: 0.2em;
+        margin:0;
+        text-align: center;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+    .tag-price{
+        font-weight: bold;
+    }
+    #banner{
+        margin: auto;
+        object-fit: cover;
+        width: 100%;
+        height: 400px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* ~~~ FOOTER ~~~ */
+    /* 
+    footer-top  >  1.form  2.contact(2)  
+    1.form    >  logo2 > mail  > form    > input : email + textarea > button
+    2.contact >  contact-logo  > contact-title
+    */
+    footer{
+        background-color: rgba(35,35,35,255);
+        width: 100%;
+    }
+    .footer-top{
+        display: flex;
+    }
+    footer p{
+        color: whitesmoke;
+    }
+    .logo2{
+        object-fit: cover;
+        height:100px;
+        width: 80px;
+    }
+    .contact, .form{
+        flex-grow: 1;
+    }
+    
+    /* form */
+    .form{display: none;}
+    .form{
+        text-align: center;
+    }
+    form input , form textarea{
+        width: 70%;
+        margin: 5px;
+        background-color:rgb(223,223,223);
+        color: rgb(66, 66, 66);
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .mail{
+        max-width: 450px;
+        display: block;
+        margin: auto;
+    }
+    .mail h3 {
+        margin-top: 0;
+        color: whitesmoke;
+    }
+    .mail .btn{
+        background-color: rgb(65, 65, 65);
+        color: whitesmoke;
+        width: 80px;
+    }
+    
+    /* contact */
+    .contact{
+        margin: auto;
+    }
+    .contact p {font-size: 0.3em;}
+    .contact__logo{
+        color: whitesmoke;
+        font-size: 2em;
+        text-align: center;
+        
+    }
+    .contact__title{
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    
+    h4{
+        color:whitesmoke;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
