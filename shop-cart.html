@@ -94,7 +94,7 @@
                             </ul>    
                         </ul>    
                     </li>
-                    <li><a  href="blog.html">BLOG</a></li>
+                    <li><a  href="#">BLOG</a></li>
                 </ul>
             </div>
 
@@ -213,10 +213,10 @@
                         
                         <div ><p class="tag-price-number" >$120.00</p></div>
                         
-                        <div class="tag-qty"><input class="tag-qty-input" type="number" min="0" value="1" oninput="updateTotal(this);"></div>
+                        <div class="tag-qty"><input onclick="removeEmptyCart(this)" class="tag-qty-input" type="number" min="0" value="1" oninput="updateTotal(this);"></div>
                         
                         <div class="tag-total" >
-                            <p >$120.00</p>
+                            <p class="tag-total-price" >$120.00</p>
                             <input  class="btn-remove" onclick="removeCartItem(this);" type="button" value="X">
                         </div>
                     </div>   
@@ -235,9 +235,9 @@
                         <div >
                             <p class="tag-price-number">$200.00</p>
                         </div>
-                        <div class="tag-qty"><input class="tag-qty-input" type="number" min="0" value="1" oninput="updateTotal(this);"></div>
+                        <div  class="tag-qty"><input onclick="removeEmptyCart(this)" class="tag-qty-input" type="number" min="0" value="1" oninput="updateTotal(this);"></div>
                         <div class="tag-total" >
-                            <p  >$200.00</p>
+                            <p class="tag-total-price" >$200.00</p>
                             <input class="btn-remove" onclick="removeCartItem(this);" type="button" value="X">
                         </div>
                     </div> 
@@ -257,9 +257,9 @@
                         <div >
                             <p class="tag-price-number">$200.00</p>
                         </div>
-                        <div class="tag-qty"><input class="tag-qty-input" type="number" min="0" value="1" oninput="updateTotal(this);"></div>
+                        <div class="tag-qty"><input onclick="removeEmptyCart(this)" class="tag-qty-input" type="number" min="0" value="1" oninput="updateTotal(this);"></div>
                         <div class="tag-total" >
-                            <p  >$200.00</p>
+                            <p class="tag-total-price" >$200.00</p>
                             <input class="btn-remove" onclick="removeCartItem(this);" type="button" value="X">
                         </div>
                     </div> 
@@ -329,14 +329,62 @@
                         <hr>
                         <div class="total-cost">
                             <p class="bill-tag">TOTAL COST</p>
-                            <p id="all-total">$520.00</p>
+                            <p id="all-total">$0</p>
                         </div>
-                        <input onclick="totalCost(this);" class="btn" type="button" value="APPLY">
+                        <input id="totalCost" onclick="totalCost(this);" class="btn" type="button" value="APPLY">
                     </div>
                 </div>
             </aside>
        </div>
+
+       <div class="arr">
+           <div class="arr-box">
+   <!-- 1 -->
+               <img src="./img/ar1.jpg" alt=""
+               onmouseover="this.src='https://lsco.scene7.com/is/image/lsco/275970003-front-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" onmouseout="this.src='https://lsco.scene7.com/is/image/lsco/275970003-back-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" 
+               >
+               <button class ="btn-add" >ADD TO CART</button>
+   
+               <p>T-shirt</p>
+               <p class="arr__price">$49.00</p>
+           </div>
+           <div class="arr-box" >
+   <!-- 2 -->
+               <!-- <button>Add to cart</button> -->
+   
+               <img 
+               src="./img/ar2.jpg" alt=""
+               onmouseover="this.src='https://lsco.scene7.com/is/image/lsco/A06740000-back-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" onmouseout="this.src='https://lsco.scene7.com/is/image/lsco/A06740000-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" 
+               >
+               <button class ="btn-add">ADD TO CART</button>
+               <p>Jean Jacket</p>
+               <p class="arr__price">$120.00</p>
+   
+           </div>
+           <div class="arr-box">
+   <!-- 3 -->
+               <img src="./img/ar3.jpg" alt=""
+               onmouseover="this.src='https://lsco.scene7.com/is/image/lsco/A03280000-back-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" onmouseout="this.src='https://lsco.scene7.com/is/image/lsco/A03280000-dynamic1-pdp?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" 
+               >
+               <button class ="btn-add">ADD TO CART</button>
+               <p>Trunker Jacket</p>
+               <p class="arr__price">$199.00</p>
+   
+           </div>
+           <div class="arr-box">
+   <!-- 4 -->
+               <img src="./img/ar4.jpg" alt=""
+               onmouseover="this.src='https://lsco.scene7.com/is/image/lsco/levis/clothing/791290001-back-pdp-lse.jpg?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" onmouseout="this.src='https://lsco.scene7.com/is/image/lsco/levis/clothing/791290001-front-pdp-lse.jpg?fmt=jpeg&qlt=70,1&op_sharpen=0&resMode=sharp2&op_usm=0.8,1,10,0&fit=crop,0&wid=900&hei=1200'" 
+               >                
+               <button class ="btn-add">ADD TO CART</button>
+               <p>Brown Coat</p>
+               <p class="arr__price">$299.00</p>
+   
+           </div>
+   
+       </div>
     </main>
+
 
     <footer>
         <div class="footer-top">

@@ -1,7 +1,9 @@
 @media only screen and (min-width: 1024px)  {
-    iframe {
+
+    video {
         width: 100%;
-        height: 750px;
+        padding-top: 7h;
+        height: 115vh;
     }
     form button{ 
         padding: 0.4em 2em;
@@ -9,7 +11,7 @@
         color: white;
         border-radius: 1em;
     }
-    .loggin.active {
+    .loggin .active {
         position: absolute;
         transition: all 300ms ease-in-out;
         transform: translate(0%,-50%) scale(1);
@@ -247,6 +249,11 @@
         cursor: pointer;
     }
 
+    .arr button:hover {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+    }
 
 
     /* photo */
@@ -633,6 +640,12 @@
         color: rgb(101,92,87);
         padding: 0.5em 0em;
         border: white 2px solid;
+        cursor: pointer;
+    }
+    .arr button:hover {
+        background-color: black;
+        color: white;
+        font-weight: bold;
     }
     iframe{
         width: 100%;
@@ -976,8 +989,13 @@
         color: rgb(101,92,87);
         padding: 0.5em 0em;
         border: white 2px solid;
+        cursor: pointer;
     }
-    
+    .arr button:hover {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+    }
     
     
     /* photo */
